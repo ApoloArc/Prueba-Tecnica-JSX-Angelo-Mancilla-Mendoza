@@ -2,6 +2,7 @@ import React from 'react'
 import SectionFirstContainer from './Sections/SectionFirstContainer/SectionFirstContainer'
 import SectionNewArrivals from './Sections/SectionNewArrivals/SectionNewArrivals'
 import SectionSecondContainer from './Sections/SectionSecondContainer/SectionSecondContainer'
+import SectionServices from './Sections/SectionServices/SectionServices'
 
 
 
@@ -14,6 +15,7 @@ function Dashboard() {
       <SectionFirstContainer />
       <SectionSecondContainer />
       <SectionNewArrivals />
+      <SectionServices />
     </div>
   )
 }
