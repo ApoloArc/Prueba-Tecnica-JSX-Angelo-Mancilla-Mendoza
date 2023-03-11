@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import { Context } from "./Context/Context";
 import { useDataSeteada } from "./Hooks/useDataSeteada";
@@ -41,6 +42,7 @@ const App = () => {
         <Dashboard />
         {/* Check to see if express server is running correctly */}
         <h5>{response}</h5>
+        <Footer />
       </div>
     </Context.Provider>
   );
