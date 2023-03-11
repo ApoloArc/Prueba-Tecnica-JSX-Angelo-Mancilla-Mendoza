@@ -22,7 +22,7 @@ function SectionNewArrivals() {
   console.log(urls);
 
   return (
-    <div className="container">
+    <div className="container" style={{marginBottom: "7rem"}}>
       <div className={styles.newArrivals__texts__container}>
         <p className="t-Font-Title">New Arrivals</p>
         <p className={styles.newArrivals__texts__p2}>
@@ -37,21 +37,46 @@ function SectionNewArrivals() {
         </div>
         <div className={`${styles.newArrivals__gridContainer__child} ${styles.gridStyle1}`}>
           <img className={styles.gridChildImg} src={urls.length ? urls[3].url : ""} alt="imgGrid" />
+          {
+            data?.productos?.length &&
+            <p>{data.productos[0].name}</p>
+          }
+            
         </div>
         <div className={`${styles.newArrivals__gridContainer__child} ${styles.gridStyle}`}>
           <img className={styles.gridChildImg} src={urls.length ? urls[4].url : ""} alt="imgGrid" />
+          {
+            data?.productos?.length &&
+            <p>{data.productos[1].name}</p>
+          }
         </div>
         <div className={`${styles.newArrivals__gridContainer__child} ${styles.gridStyle}`}>
           <img className={styles.gridChildImg} src={urls.length ? urls[5].url : ""} alt="imgGrid" />
+          {
+            data?.productos?.length &&
+            <p>{data.productos[2].name}</p>
+          }
         </div>
         <div className={`${styles.newArrivals__gridContainer__child} ${styles.gridStyle1}`}>
           <img className={styles.gridChildImg} src={urls.length ? urls[0].url : ""} alt="imgGrid" />
+          {
+            data?.productos?.length &&
+            <p>{data.productos[3].name}</p>
+          }
         </div>
         <div className={`${styles.newArrivals__gridContainer__child} ${styles.gridStyle}`}>
           <img className={styles.gridChildImg} src={urls.length ? urls[1].url : ""} alt="imgGrid" />
+          {
+            data?.productos?.length &&
+            <p>{data.productos[4].name}</p>
+          }
         </div>
         <div className={`${styles.newArrivals__gridContainer__child} ${styles.gridStyle}`}>
           <img className={styles.gridChildImg} src={urls.length ? urls[2].url : ""} alt="imgGrid" />
+          {
+            data?.productos?.length &&
+            <p>{data.productos[5].name}</p>
+          }
         </div>
       </div>
     </div>

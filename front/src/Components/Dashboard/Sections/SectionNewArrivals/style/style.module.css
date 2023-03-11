@@ -16,16 +16,19 @@
 .newArrivals__gridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
-    gap: 1rem;
+    gap: 3rem;
     grid-auto-flow: dense;
-    grid-auto-rows: 25rem;
+    grid-auto-rows: 18rem;
 }
 
 .newArrivals__gridContainer__child {
+    flex-direction: column;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    font-weight: 500;
 }
 
 .newArrivals__gridContainer__child1 {

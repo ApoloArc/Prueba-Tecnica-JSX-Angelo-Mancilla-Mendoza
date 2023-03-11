@@ -10,13 +10,12 @@ function Dashboard() {
 
   return (
     // este componente va a mostrar la pantalla principal, la vamos a seccionar
-    <div>
-
+    <>
       <SectionFirstContainer />
       <SectionSecondContainer />
       <SectionNewArrivals />
       <SectionServices />
-    </div>
+    </>
   )
 }
 

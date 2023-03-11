@@ -1,5 +1,6 @@
 .footer__container {
     background-color: #0f0a0a;
+    padding: 5rem 0;
 }
 
 .footer__container__logoImgs {
@@ -50,6 +51,6 @@
         font-size: 1.5rem;
     }
     .footer__sectionFooterTexts__container{
-        display: block;
+        display: flex;
     }
 }

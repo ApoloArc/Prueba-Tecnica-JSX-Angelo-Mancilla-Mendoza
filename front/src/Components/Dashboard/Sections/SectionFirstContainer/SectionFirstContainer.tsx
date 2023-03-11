@@ -11,7 +11,7 @@ function SectionFirstContainer() {
   const imagenPortada = data.productos?.length && data.url + data.productos[0].image;
 
   return (
-    <div className="container">
+    <div className="container" style={{marginBottom: "7rem"}}>
       <div className={style.amazing__container}>
         <div className={style.amazing__textsContainer}>
           <div className={style.amazing__textsContainer__first}>
