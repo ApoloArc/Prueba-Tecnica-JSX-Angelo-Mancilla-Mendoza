@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../Context/Context";
 import { useDataSeteada } from "../../Hooks/useDataSeteada";
 import { IProduct } from "../../Interfaces/IProduct";
@@ -29,6 +29,14 @@ function CustomButton(props: data) {
     }
     toast.success(message);
   }
+
+
+  useEffect(() => {
+    
+    
+  
+  }, [])
+  
 
   return (
     <>
