@@ -1,0 +1,33 @@
+.gridImages__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gridImages__imagecontainer{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    /* gap: 1rem; */
+}
+
+.gridImages__imagecontainer__image{
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.gridImages__p{
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.gridImages__imagecontainer__div{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
