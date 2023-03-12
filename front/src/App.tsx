@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Dashboard from "./Components/Dashboard/Dashboard";
-import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
 import { Context } from "./Context/Context";
-import { useDataSeteada } from "./Hooks/useDataSeteada";
 import { useObtenerProductos } from "./Hooks/useProducs";
+
+// para el ruteo
+import { Routes, Route } from "react-router-dom";
+import { routes } from "./Routes/routes";
 
 // estilos que usaremos para todos los componentes, seran algunos que vamos a usar a menudo
 
 import "./style/globalStyles.css";
+import { ICarrito } from "./Interfaces/ICarrito";
+import ProductDetail from "./Components/Products/ProductDetail/ProductDetail";
+import { IProduct } from "./Interfaces/IProduct";
 
 const App = () => {
   // -------------------------------------------------
@@ -28,22 +31,44 @@ const App = () => {
   }, []);
   // -------------------------------------------------
 
+  const [carrito, setCarrito] = useState<ICarrito>({
+    pedidoCompleto: [
+      {
+        producto: {
+          brand: "",
+          category: "",
+          countInStock: 0,
+          description: "",
+          id: "",
+          image: "",
+          name: "",
+          numReviews: 0,
+          price: 0,
+          rating: 0,
+        },
+        cantidad: 0,
+      },
+    ],
+  });
   //obtenemos los productos a través de nuestro custom hook
-  
+
   const productos = useObtenerProductos();
   const url = "http://localhost:5000/";
 
   return (
-    // Englobamos el componente para proveer la data
-    <Context.Provider value={{url, productos}}>
-      <div style={{ textAlign: "center" }}>
-        <Header />
-        {/* <h1> Prueba tecnica front Ecomsur 2021</h1> */}
-        <Dashboard />
-        {/* Check to see if express server is running correctly */}
-        <h5>{response}</h5>
-        <Footer />
-      </div>
+    <Context.Provider value={{ url, productos, carrito, setCarrito }}>
+      {/* ponemos las rutas a disposición de toda la aplicación */}
+
+      <Routes>
+        {routes.map((route, i) => {
+          return <Route key={i} path={route.path} element={<route.element />} />;
+        })}
+        {productos.map((route, i) => {
+          return <Route key={i} path={`/${route.name}`} element={<ProductDetail producto={route} url={"http://localhost:5000/"}/>} />;
+        })}
+      </Routes>
+      {/* Check to see if express server is running correctly */}
+      <h5>{response}</h5>
     </Context.Provider>
   );
 };

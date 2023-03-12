@@ -1,0 +1,30 @@
+.cart__texts__container{
+    width: 100%;
+    text-align: center;
+}
+
+.cart__texts__p{
+    font-weight: 500;
+}
+
+.cart__table__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+}
+
+.cart__table__p{
+    font-weight: bold;
+}
+
+.cart__pb{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* media querys */
+
+@media(min-width:765px){
+    
+}

@@ -1,3 +1,5 @@
+import { ICarrito } from "./ICarrito";
+
 export interface IProduct {
   id: string;
   name: string;
@@ -15,5 +17,7 @@ export interface IProduct {
 export interface IDataComplete{
   productos?: IProduct[];
   url: string;
+  carrito: ICarrito;
+  setCarrito?: React.Dispatch<React.SetStateAction<ICarrito>>;
 }
 
