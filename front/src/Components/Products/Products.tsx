@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 // estilos
 import style from "./style/style.module.css";
+import CustomButton from "../Custom/CustomButton";
 
 interface url {
   url: string;
@@ -48,7 +49,7 @@ function Products() {
                     </div>
                     <p className={style.products__textsContainer__price}>Price: ${producto.price}</p>
                   </Link>
-                  <button className="button">Add item to cart</button>
+                  <CustomButton producto={producto}/>
                 </div>
               ))
             : ""}
@@ -64,7 +65,7 @@ function Products() {
                     </div>
                     <p className={style.products__textsContainer__price}>Price: ${producto.price}</p>
                   </Link>
-                  <button className="button">Add item to cart</button>
+                  <CustomButton producto={producto}/>
                 </div>
               ))
             : ""}
@@ -79,7 +80,7 @@ function Products() {
                     </div>
                     <p className={style.products__textsContainer__price}>Price: ${producto.price}</p>
                   </Link>
-                  <button className="button">Add item to cart</button>
+                  <CustomButton producto={producto}/>
                 </div>
               ))
             : ""}
