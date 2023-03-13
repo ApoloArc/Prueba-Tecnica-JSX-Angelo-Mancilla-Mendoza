@@ -25,9 +25,10 @@ function SectionSecondContainer() {
                 <img className={style.gridImages__imagecontainer__image} src={data.url + producto.image} alt={`img${producto.name}`} />
                 <div className={style.gridImages__imagecontainer__div}>
                   <p className={style.gridImages__p}>{producto.name}</p>
+                  <p className={style.gridImages__pb}>${producto.price}</p>
                 </div>
               </Link>
-              <CustomButton producto={producto}/>
+              <CustomButton producto={producto} />
             </div>
           ))}
       </div>

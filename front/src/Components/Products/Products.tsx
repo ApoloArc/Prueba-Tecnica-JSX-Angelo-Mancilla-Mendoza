@@ -24,8 +24,6 @@ function Products() {
     urls.push({ url: data.url + producto.image });
   });
 
-  console.log(data);
-
   return (
     <>
       <Header />
@@ -46,10 +44,12 @@ function Products() {
                     <img src={urls[index].url} alt="img" />
                     <div className={style.products__gridChild__div}>
                       <p>{producto.name}</p>
+                      <p className={style.pDetail__spanReviews}> {producto.rating} stars ⭐</p>
+                      <p className={style.pDetail__spanReviews}>({producto.numReviews}) reviews</p>
                     </div>
                     <p className={style.products__textsContainer__price}>Price: ${producto.price}</p>
                   </Link>
-                  <CustomButton producto={producto}/>
+                  <CustomButton producto={producto} />
                 </div>
               ))
             : ""}
@@ -65,7 +65,7 @@ function Products() {
                     </div>
                     <p className={style.products__textsContainer__price}>Price: ${producto.price}</p>
                   </Link>
-                  <CustomButton producto={producto}/>
+                  <CustomButton producto={producto} />
                 </div>
               ))
             : ""}
@@ -80,7 +80,7 @@ function Products() {
                     </div>
                     <p className={style.products__textsContainer__price}>Price: ${producto.price}</p>
                   </Link>
-                  <CustomButton producto={producto}/>
+                  <CustomButton producto={producto} />
                 </div>
               ))
             : ""}

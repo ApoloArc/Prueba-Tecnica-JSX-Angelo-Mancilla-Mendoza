@@ -38,6 +38,11 @@
     transform: translateY(0);
 }
 
+.button:disabled{
+    background-color: gray;
+    
+}
+
 /* textos */
 
 .t-Font-Title{
@@ -48,4 +53,8 @@
 a{
     text-decoration: none;
     color: black;
+}
+
+html, body, #root{
+    min-height: 100vh;
 }
