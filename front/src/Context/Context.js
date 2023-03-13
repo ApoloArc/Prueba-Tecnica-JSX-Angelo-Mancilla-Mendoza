@@ -1,10 +1,8 @@
-import { createContext } from "react";
-import { useObtenerProductos } from "../Hooks/useProducs";
-import { IDataComplete } from "../Interfaces/IProduct";
+import { createContext } from "react"
 
 //Vamos a usar el Hook "useContext para tener la response disponible en toda la aplicación"
 
-const initialState: IDataComplete = {
+const initialState = {
   url: "http://localhost:5000",
   carrito: {
     pedidoCompleto: [
@@ -19,13 +17,13 @@ const initialState: IDataComplete = {
           name: "",
           numReviews: 0,
           price: 0,
-          rating: 0,
+          rating: 0
         },
-        cantidad: 0,
-      },
-    ],
-  },
-};
+        cantidad: 0
+      }
+    ]
+  }
+}
 
 //obtenemos los productos a través de nuestro custom hook
-export const Context = createContext<IDataComplete>(initialState);
+export const Context = createContext(initialState)
