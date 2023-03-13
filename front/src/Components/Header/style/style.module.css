@@ -121,11 +121,25 @@
     height: 100%;
     display: flex;
     align-items: center;
+    gap: .5rem;
 }
 .header__mobile__carritoCompras img{
     height: 60%;
 }
 
+.header__mobile__carritoCompras p{
+    margin: 0;
+}
+
+.header__listContainer__carritoContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+.header__listContainer__carritoContainer p{
+    margin: 0;
+}
 
 /* media querys */
 

@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 350px;
+    height: 400px;
     /* gap: 1rem; */
 }
 
@@ -30,4 +30,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.gridImages__pb{
+    font-weight: bold;
+}
+
+.gridImages__imagecontainer__div p{
+    margin: 0;
 }

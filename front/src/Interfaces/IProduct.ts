@@ -18,6 +18,6 @@ export interface IDataComplete{
   productos?: IProduct[];
   url: string;
   carrito: ICarrito;
-  setCarrito?: React.Dispatch<React.SetStateAction<ICarrito>>;
+  setCarrito?: React.Dispatch<React.SetStateAction<ICarrito>> | undefined;
 }
 

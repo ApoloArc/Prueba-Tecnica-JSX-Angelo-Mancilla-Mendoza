@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "./Context/Context";
 import { useObtenerProductos } from "./Hooks/useProducs";
 
@@ -31,24 +31,15 @@ const App = () => {
   }, []);
   // -------------------------------------------------
 
-  const [carrito, setCarrito] = useState<ICarrito>({
-    pedidoCompleto: [
-      {
-        producto: {
-          brand: "",
-          category: "",
-          countInStock: 0,
-          description: "",
-          id: "",
-          image: "",
-          name: "",
-          numReviews: 0,
-          price: 0,
-          rating: 0,
-        },
-        cantidad: 0,
-      },
-    ],
+  const dataComplete = useContext(Context)
+
+  const [carrito, setCarrito] = useState(() => {
+    try {
+      const item = JSON.parse(window.localStorage.getItem("carrito")as string);
+      return item ? item : dataComplete.carrito
+    } catch (error) {
+      console.error(error)
+    }
   });
   //obtenemos los productos a través de nuestro custom hook
 
@@ -68,7 +59,7 @@ const App = () => {
         })}
       </Routes>
       {/* Check to see if express server is running correctly */}
-      <h5>{response}</h5>
+      {/* <h5>{response}</h5> */}
     </Context.Provider>
   );
 };

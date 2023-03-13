@@ -5,7 +5,13 @@
     align-items: center;
 }
 
-.amazing__textsContainer {}
+.amazing__textsContainer {
+    display: flex;
+    flex-direction: column;
+    /* gap: .5rem; */
+    min-height: 60vh;
+    justify-content: space-evenly;
+}
 
 .amazing__textsContainer__first {
     text-align: left;
@@ -15,11 +21,13 @@
 .amazing__textsContainer__first__p {
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 2.5rem;
 }
 
 .amazing__textsContainer__first__p span {
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 4rem;
 }
 
 .amazing__textContainer__second {
@@ -67,5 +75,11 @@
     }
     .amazing__textsContainer__second__p{
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 765px){
+    .amazing__textsContainer{
+        justify-content: center;
     }
 }

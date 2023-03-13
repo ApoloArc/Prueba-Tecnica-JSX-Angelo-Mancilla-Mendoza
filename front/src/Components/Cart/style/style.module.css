@@ -1,3 +1,11 @@
+.cart__containerAllDivs{
+    min-height: 62vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
 .cart__texts__container{
     width: 100%;
     text-align: center;
@@ -16,15 +24,88 @@
 
 .cart__table__p{
     font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
 }
+
+.cart__containerAll{
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .cart__pb{
     font-weight: bold;
     cursor: pointer;
+    width: max-content;
+    transition: .1s all ease-in-out;
 }
+
+.cart__pb:hover{
+    opacity: .7;
+}
+
+.cart__containerImgAndText{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: left;
+    height: 70%;
+}
+
+.cart__containerImgAndText img{
+    height: 100px;
+}
+
+.cart__containerImgAndText p{
+    text-align: left;
+}
+
+.cart__divPriceAndQuantity{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.cart__divPriceAndQuantity p{
+    margin: 0;
+}
+
+.cart__arrows{
+    display: flex;
+    gap: 1rem;
+}
+
+.cart__arrows p{
+    cursor: pointer;
+}
+
+.cart__containerImgAndTextIcon{
+    height: 20px !important;
+    cursor: pointer;
+}
+
+.cart__inputNumber{
+    width: 20px;
+    text-align: center;
+}
+
 
 /* media querys */
 
-@media(min-width:765px){
-    
+@media(min-width:785px){
+    .cart__containerAll{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .cart__containerImgAndText{
+        width: 70%;
+    }
+    .cart__imgProduct{
+        height: 200px !important;
+    }
 }
